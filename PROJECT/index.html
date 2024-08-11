@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBER STROMS</title>
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;700;900&family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="#">CYBER<span>STROMS</span></a></div>
+        <ul class="menu">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="home reveal" id="home">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Hello, I'm Nandha</h1>
+            <p>I'm a <span>Cyber Security</span> Student</p>
+        </div>
+    </section>
+
+    <section class="about reveal" id="about">
+        <div class="content">
+            <h2>About Me</h2>
+            <p>Hi, I’m Nandha, a passionate Cyber Security student with 3 years of experience in network security, ethical hacking, and vulnerability assessment.</p>
+            <p>I specialize in penetration testing, incident response, and security analysis. I enjoy working on projects that challenge my creativity and problem-solving abilities, and I'm dedicated to staying up-to-date with the latest security trends and technologies.</p>
+        </div>
+    </section>
+
+    <section class="skills reveal" id="skills">
+        <div class="content">
+            <h2>Skills</h2>
+            <ul>
+                <li>Penetration Testing: Conducting thorough security assessments to identify vulnerabilities in systems, networks, and applications.</li>
+                <li>Network Security: Implementing and managing security measures to protect network infrastructure and prevent unauthorized access.</li>
+                <li>Ethical Hacking: Using hacking techniques in a legal and ethical manner to test and improve the security of systems.</li>
+                <li>Incident Response: Analyzing and responding to security breaches and incidents to minimize damage and recover systems.</li>
+                <li>Vulnerability Assessment: Identifying and evaluating security weaknesses in systems and providing recommendations for mitigation.</li>
+                <li>Security Tools: Proficient with tools such as Wireshark, Metasploit, Nmap, Burp Suite, and others for security testing and analysis.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="contact reveal" id="contact">
+        <div class="content">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('scroll', reveal);
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 150;
+                if (revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
